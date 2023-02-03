@@ -7,5 +7,5 @@ def home(request):
     return HttpResponse("Hello from Homepage")
 
 
-def details(request, id):
+def job_detail(request, id):
     return HttpResponse(id)
