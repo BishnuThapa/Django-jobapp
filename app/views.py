@@ -5,7 +5,8 @@ from .models import JobPost
 
 
 def home(request):
-    jobs = JobPost.objects.all()
+    jobs = JobPost.objects.filter(salary=25000)
+    # jobs = JobPost.objects.all()
     context = {
         'jobs': jobs
     }
