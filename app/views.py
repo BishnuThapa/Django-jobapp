@@ -5,8 +5,8 @@ from .models import JobPost
 
 
 def home(request):
-    jobs = JobPost.objects.filter(salary=25000)
-    # jobs = JobPost.objects.all()
+    jobs = JobPost.objects.all()
+    # jobs=JobPost.objects.order_by("?") --> get values in random order
     context = {
         'jobs': jobs
     }
