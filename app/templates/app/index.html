@@ -10,7 +10,9 @@
     <h2>Welcome to Job Board</h2>
     <ul>
         {% for jobs in jobs %}
+        <a href="{% url 'job_detail' jobs.id %}">
         <li>{{jobs.title}}</li>
+        </a>
         {% endfor %}
     </ul>
   </body>

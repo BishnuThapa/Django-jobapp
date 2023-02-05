@@ -11,8 +11,13 @@ def home(request):
         'jobs': jobs
     }
     # return HttpResponse("Hello from Homepage")
-    return render(request, 'index.html', context)
+    return render(request, 'app/index.html', context)
 
 
 def job_detail(request, id):
-    return HttpResponse(id)
+    # return HttpResponse(id)
+    job = JobPost.objects.get(id=id)
+    context = {
+        'job': job
+    }
+    return render(request, 'app/job_detail.html', context)
