@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import JobPost
+from .models import JobPost, Author, Location, Skills
 # Register your models here.
 
 
@@ -7,7 +7,7 @@ from .models import JobPost
 @admin.register(JobPost)
 class JobPostAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
-    list_display = ('title',  'salary', 'posted_date',)
+    list_display = ('title',  'salary', 'posted_date', 'location')
     list_editable = ('salary',)
     list_filter = ('posted_date', 'salary', 'expiry',)
     search_fields = ('title', 'salary',)
@@ -23,6 +23,11 @@ class JobPostAdmin(admin.ModelAdmin):
         }),
         ('More Information', {
             'classes': ('collapse',),
-            'fields': ('description', 'salary', 'expiry')
+            'fields': ('description', 'salary', 'expiry', 'location', 'author', 'skills')
         }),
     )
+
+
+admin.site.register(Author)
+admin.site.register(Location)
+admin.site.register(Skills)
