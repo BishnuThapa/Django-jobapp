@@ -30,6 +30,10 @@ class Skills(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = 'Skill'
+        verbose_name_plural = 'Skills'
+
 
 class JobPost(models.Model):
     title = models.CharField(max_length=200)
