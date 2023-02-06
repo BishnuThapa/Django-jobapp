@@ -10,3 +10,19 @@ class JobPostAdmin(admin.ModelAdmin):
     list_display = ('title',  'salary', 'posted_date',)
     list_editable = ('salary',)
     list_filter = ('posted_date', 'salary', 'expiry',)
+    search_fields = ('title', 'salary',)
+    search_help_text = "Write in your query & hit enter"
+    # fields = (('title', 'slug'), 'description')
+    # exclude = ('posted_date',)
+
+    # fieldset options
+    # - (name,field_options)
+    fieldsets = (
+        ('Basic Information', {
+            'fields': ('title', 'slug')
+        }),
+        ('More Information', {
+            'classes': ('collapse',),
+            'fields': ('description', 'salary', 'expiry')
+        }),
+    )
