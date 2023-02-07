@@ -7,8 +7,10 @@
     <title>Subscribe Form</title>
   </head>
   <body>
-    <form method="post" action="{% url 'subscribe' %}">
+    <form method="post">
+      {% csrf_token %}
       {{form}}
+      <input type="submit" value="Submit">
       {% comment %} {% csrf_token %}
       {% if email_error_empty %}
         <p>{{email_error_empty}}</p>
