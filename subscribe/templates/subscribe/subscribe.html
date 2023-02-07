@@ -8,7 +8,8 @@
   </head>
   <body>
     <form method="post" action="{% url 'subscribe' %}">
-      {% csrf_token %}
+      {{form}}
+      {% comment %} {% csrf_token %}
       {% if email_error_empty %}
         <p>{{email_error_empty}}</p>
       {% endif %}
@@ -31,7 +32,7 @@
       <label for="email">Email</label>
       <input type="email" id="email" name="email" placeholder="Your Email" />
 
-      <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" /> {% endcomment %}
     </form>
   </body>
 </html>
