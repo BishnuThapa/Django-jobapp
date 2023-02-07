@@ -9,7 +9,9 @@
   <body>
     <form method="post">
       {% csrf_token %}
-      {{form}}
+      {{form.as_p}}
+      {% comment %} {{form.as_table}} {% endcomment %}
+      {% comment %} {{form.as_ul}} {% endcomment %}
       <input type="submit" value="Submit">
       {% comment %} {% csrf_token %}
       {% if email_error_empty %}
