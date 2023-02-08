@@ -2,6 +2,8 @@
 
 from django import forms
 
+# Raise exception if user inputs , in fields
+
 
 def validate_comma(value):
     if "," in value:
