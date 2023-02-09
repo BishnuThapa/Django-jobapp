@@ -18,7 +18,10 @@ from django.urls import path, include
 from django.http import HttpResponse
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
+    path('secret/', admin.site.urls),
+    # path('admin/', admin.site.urls),
     path('', include('app.urls')),
     path('', include('subscribe.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
