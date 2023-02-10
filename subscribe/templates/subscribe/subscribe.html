@@ -8,23 +8,29 @@
   </head>
   <body>
     <form method="post">
-      {% csrf_token %}
-      {% comment %} {{form.as_p}} {% endcomment %}
-      {% comment %} {{form.as_table}} {% endcomment %}
-      {% comment %} {{form.as_ul}} {% endcomment %}
-      {% comment %} <input type="submit" value="Submit"> {% endcomment %}
-      {% comment %} {% csrf_token %}
-      {% if email_error_empty %}
-        <p>{{email_error_empty}}</p>
-      {% endif %}  {% endcomment %}
-      <label for="f_name">First Name</label>
-      {{form.first_name}}
+      {% csrf_token %} {% comment %} {{form.as_p}} {% endcomment %} {% comment
+      %} {{form.as_table}} {% endcomment %} {% comment %} {{form.as_ul}} {%
+      endcomment %} {% comment %} <input type="submit" value="Submit" /> {%
+      endcomment %} {% comment %} {% csrf_token %} {% if email_error_empty %}
+      <p>{{email_error_empty}}</p>
+      {% endif %} {% endcomment %}
+      <div class="subscribe_field">
+        {{form.first_name.errors}}
+        <label for="f_name">First Name</label>
+        {{form.first_name}}
+      </div>
 
-      <label for="l_name">Last Name</label>
-      {{form.last_name}}
+      <div class="subscribe_field">
+        {{form.last_name.errors}}
+        <label for="l_name">Last Name</label>
+        {{form.last_name}}
+      </div>
 
-      <label for="email">Email</label>
-      {{form.email}}
+      <div class="subscribe_field">
+        {{form.email.errors}}
+        <label for="email">Email</label>
+        {{form.email}}
+      </div>
 
       <input type="submit" value="Submit" />
     </form>
