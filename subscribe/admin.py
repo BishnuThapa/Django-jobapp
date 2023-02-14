@@ -3,4 +3,8 @@ from .models import Subscribe
 # Register your models here.
 
 
-admin.site.register(Subscribe)
+@admin.register(Subscribe)
+class SubscribeAdmin(admin.ModelAdmin):
+    list_display = ('email', 'option')
+    list_editable = ('option',)
+    list_per_page = 10
