@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Subscribe Form</title>
-    <style>
+    <link rel="stylesheet" href="{% static 'main.css'%}" />
+    <!-- <style>
       h1 {
         color: red;
       }
-    </style>
+    </style> -->
   </head>
   <body>
     <h1>Subscribe Form</h1>
@@ -49,10 +51,13 @@
     </form>
     <button onclick="task()" type="submit">Click Me</button>
 
+    <script src="{% static 'main.js'%}"></script>
+    {% comment %}
     <script>
       function task() {
         alert("Thanks for clicking.");
       }
     </script>
+    {% endcomment %}
   </body>
 </html>
