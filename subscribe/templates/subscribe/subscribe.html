@@ -5,28 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Subscribe Form</title>
+    <style>
+      h1 {
+        color: red;
+      }
+    </style>
   </head>
   <body>
+    <h1>Subscribe Form</h1>
     <form method="post">
-      {% csrf_token %}
-      {% comment %} {{form.as_p}}  {{form.as_table}} {{form.as_ul}} <input type="submit" value="Submit" /> {% csrf_token %} {% if email_error_empty %}
+      {% csrf_token %} {% comment %} {{form.as_p}} {{form.as_table}}
+      {{form.as_ul}} <input type="submit" value="Submit" /> {% csrf_token %} {%
+      if email_error_empty %}
       <p>{{email_error_empty}}</p>
-      {% endif %}  {% endcomment %}
-
-
-
-      {% comment %} RENDERING FIELDS WITH FOOR LOOP {% endcomment %}
-
-      {% for field in form  %}
-        <div class="subscribe_field">
-          {{field.errors}}
-          {{field.label_tag}}
-          {{field}}
-        </div>
-      {% endfor %}
-      {% comment %} <div class="subscribe_field">
+      {% endif %} {% endcomment %} {% comment %} RENDERING FIELDS WITH FOOR LOOP
+      {% endcomment %} {% for field in form %}
+      <div class="subscribe_field">
+        {{field.errors}} {{field.label_tag}} {{field}}
+      </div>
+      {% endfor %} {% comment %}
+      <div class="subscribe_field">
         {{form.first_name.errors}}
-        <label for="{{form.first_name.id_for_label}}">{{form.first_name.label}}</label>
+        <label for="{{form.first_name.id_for_label}}"
+          >{{form.first_name.label}}</label
+        >
         {{form.first_name}}
       </div>
 
@@ -40,7 +42,8 @@
         {{form.email.errors}}
         <label for="{{form.email.id_for_label}}">Email</label>
         {{form.email}}
-      </div> {% endcomment %}
+      </div>
+      {% endcomment %}
 
       <input type="submit" value="Submit" />
     </form>
