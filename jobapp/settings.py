@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'admin_honeypot',
+    'uploadapp',
 ]
 
 MIDDLEWARE = [
