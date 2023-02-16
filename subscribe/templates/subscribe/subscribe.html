@@ -14,7 +14,9 @@
     </style> -->
   </head>
   <body>
-    <h1>Subscribe Form</h1>
+    <h1>
+      <san><img src="{% static 'subscribe/mail.png' %}" /></san> Subscribe Form
+    </h1>
     <form method="post">
       {% csrf_token %} {% comment %} {{form.as_p}} {{form.as_table}}
       {{form.as_ul}} <input type="submit" value="Submit" /> {% csrf_token %} {%
