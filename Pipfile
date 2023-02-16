@@ -7,6 +7,7 @@ name = "pypi"
 django = "*"
 django-ckeditor = "*"
 django-admin-honeypot-updated-2021 = "*"
+pillow = "*"
 
 [dev-packages]
 autopep8 = "*"
