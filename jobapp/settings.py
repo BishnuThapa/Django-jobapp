@@ -130,7 +130,10 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/media/'  # How the uploaded media is served or accessed
+
+
+# Defines where uploaded images are stored
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
 # MEDIA_ROOT=BASE_DIR / 'uploads/'
