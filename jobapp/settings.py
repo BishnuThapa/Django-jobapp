@@ -133,6 +133,8 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
+# MEDIA_ROOT=BASE_DIR / 'uploads/'
+
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
 # Default primary key field type
