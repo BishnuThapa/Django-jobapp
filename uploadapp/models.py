@@ -9,3 +9,12 @@ class Uploads(models.Model):
 
     def __str__(self):
         return self.description
+
+
+# Upload files other than images only
+class UploadFile(models.Model):
+    file = models.FileField(upload_to='files')
+    description = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.description
