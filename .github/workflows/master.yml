@@ -12,5 +12,5 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: ftp.etihadtechnology.com.np
-        username: ${{ secrets.ftp_username }}
+        username: bishnu@etihadtechnology.com.np
         password: ${{ secrets.ftp_password }}
