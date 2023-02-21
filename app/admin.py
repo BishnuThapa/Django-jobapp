@@ -7,8 +7,8 @@ from .models import JobPost, Author, Location, Skills
 @admin.register(JobPost)
 class JobPostAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
-    list_display = ('title',  'salary', 'posted_date', 'location')
-    list_editable = ('salary',)
+    list_display = ('title',  'salary', 'posted_date', 'location', 'type')
+    list_editable = ('salary', 'type',)
     list_filter = ('posted_date', 'salary', 'expiry',)
     search_fields = ('title', 'salary',)
     search_help_text = "Write in your query & hit enter"
