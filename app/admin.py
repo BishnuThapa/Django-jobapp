@@ -23,7 +23,7 @@ class JobPostAdmin(admin.ModelAdmin):
         }),
         ('More Information', {
             'classes': ('collapse',),
-            'fields': ('description', 'salary', 'expiry', 'location', 'author', 'skills')
+            'fields': ('description', 'salary', 'expiry', 'location', 'author', 'skills', 'type')
         }),
     )
 

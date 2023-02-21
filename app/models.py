@@ -37,6 +37,11 @@ class Skills(models.Model):
 
 
 class JobPost(models.Model):
+    JOB_TYPE_CHOICES = [
+        ('Full Time', 'Full Time'),
+        ('Part Time', 'Part Time')
+    ]
+
     title = models.CharField(max_length=200)
     slug = models.SlugField(null=True, max_length=100, unique=True)
     description = RichTextUploadingField()
@@ -48,6 +53,8 @@ class JobPost(models.Model):
         Location, on_delete=models.CASCADE, null=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE, null=True)
     skills = models.ManyToManyField(Skills)
+    type = models.CharField(max_length=10, null=False,
+                            choices=JOB_TYPE_CHOICES, default='Full Time')
 
     def __str__(self):
         return self.title
