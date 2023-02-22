@@ -11,7 +11,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: jobs.etihadtechnology.com.np
+        server: etihadtechnology.com.np
         username: bishnu@jobs.etihadtechnology.com.np	
         password: ${{ secrets.ftp_password }}
         server-dir: /home2/etihadte/jobs.etihadtechnology.com.np/
