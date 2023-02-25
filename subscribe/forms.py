@@ -15,9 +15,9 @@ class SubscribeForm(forms.ModelForm):
             'last_name': _('Enter Last Name'),
             'email': _('Enter Email')
         }
-        help_texts = {
-            'first_name': _('Enter Character only.')
-        }
+        # help_texts = {
+        #     'first_name': _('Enter Character only.')
+        # }
         error_messages = {
             'first_name': {
                 'required': _('You cannot move forward without first name.')
