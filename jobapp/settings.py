@@ -127,9 +127,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, "static"),
-# ]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 MEDIA_URL = '/media/'  # How the uploaded media is served or accessed
 
@@ -260,7 +260,7 @@ JAZZMIN_SETTINGS = {
     "site_brand": "Job-Board",
 
     # Logo to use for your site, must be present in static files, used for brand on top left
-    "site_logo": "books/img/logo.png",
+    "site_logo": "logo/logo.png",
 
     # Logo to use for your site, must be present in static files, used for login form logo (defaults to site_logo)
     "login_logo": None,
