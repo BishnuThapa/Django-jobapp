@@ -10,6 +10,10 @@ class Uploads(models.Model):
     def __str__(self):
         return self.description
 
+    class Meta:
+        verbose_name = 'Upload'
+        verbose_name_plural = 'Uploads'
+
 
 # Upload files other than images only
 class UploadFile(models.Model):
