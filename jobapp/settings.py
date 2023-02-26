@@ -282,7 +282,7 @@ JAZZMIN_SETTINGS = {
 
     # List of model admins to search from the search bar, search bar omitted if excluded
     # If you want to use a single search field you dont need to use a list, you can use a simple string
-    "search_model": ["auth.User", "auth.Group", "jobapp.JobPost"],
+    "search_model": ["auth.User", "jobapp.JobPost", "subscribe.Subscribe"],
 
     # Field name on user model that contains avatar ImageField/URLField/Charfield or a callable that receives the user
     "user_avatar": None,
@@ -299,8 +299,8 @@ JAZZMIN_SETTINGS = {
             "permissions": ["auth.view_user"]},
 
         # external url that opens in a new window (Permissions can be added)
-        {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues",
-            "new_window": True},
+        # {"name": "Support", "url": "https://github.com/farridav/django-jazzmin/issues",
+        #     "new_window": True},
 
         # model admin to link to (Permissions checked against model)
         {"model": "auth.User"},
