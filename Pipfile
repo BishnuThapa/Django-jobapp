@@ -9,6 +9,7 @@ django-ckeditor = "*"
 django-admin-honeypot-updated-2021 = "*"
 pillow = "*"
 django-jazzmin = "*"
+django-import-export = "*"
 
 [dev-packages]
 autopep8 = "*"
